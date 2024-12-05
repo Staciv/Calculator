@@ -1,0 +1,79 @@
+body {
+  margin-top: 15%;
+  margin-left: 15%;
+}
+
+.header_wrap {
+  max-width: 450px;
+  height: 190px;
+  background-color: rgb(105, 105, 100);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.button_navigation {
+  padding: 15px;
+  display: flex;
+  gap: 10px;
+}
+.button_navigation:hover {
+  opacity: 1;
+}
+.button_navigation button {
+  padding: 2px;
+  border-radius: 50%;
+}
+.button_navigation button svg {
+  opacity: 0;
+  transition: opacity 0.1s;
+}
+.button_navigation button:hover svg {
+  opacity: 1;
+}
+.close {
+  background-color: rgb(213, 129, 129);
+}
+.collapse {
+  background-color: rgb(222, 199, 135);
+}
+.expand {
+  background-color: rgb(154, 188, 119);
+}
+
+.calculations {
+  display: flex;
+  padding-right: 20px;
+  justify-content: end;
+  font-size: 100px;
+  color: rgb(231, 231, 231);
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.buttons button {
+  height: 90px;
+  font-size: 50px;
+  font-weight: 500;
+  color: rgb(231, 231, 231);
+  background: #a1a1a1;
+  cursor: pointer;
+  border: 0.7px solid #4e4e4e;
+}
+
+.buttons button.zero {
+  grid-column: span 2;
+  border-bottom-left-radius: 20px;
+}
+
+.buttons button.orange-button {
+  background: rgb(255, 169, 11);
+  border-bottom-right-radius: 20px;
+}
+.buttons button.dark-gray {
+  background: gray;
+}
