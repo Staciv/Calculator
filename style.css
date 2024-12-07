@@ -1,12 +1,24 @@
-body {
-  margin-top: 15%;
-  margin-left: 15%;
+:root {
+  --white: rgb(231, 231, 231);
+  --gray-light: rgb(105, 105, 100);
+  --gray-dark: #a1a1a1;
+  --gray-medium: gray;
+  --gray-border: #4e4e4e;
+  --orange: rgb(255, 169, 11);
+  --red: rgb(213, 129, 129);
+  --yellow: rgb(222, 199, 135);
+  --green: rgb(154, 188, 119);
+}
+
+.header {
+  display: flex;
+  justify-content: center;
 }
 
 .header_wrap {
   max-width: 450px;
   height: 190px;
-  background-color: rgb(105, 105, 100);
+  background-color: var(--gray-light);
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
@@ -31,23 +43,30 @@ body {
   opacity: 1;
 }
 .close {
-  background-color: rgb(213, 129, 129);
+  background-color: var(--red);
 }
 .collapse {
-  background-color: rgb(222, 199, 135);
+  background-color: var(--yellow);
 }
 .expand {
-  background-color: rgb(154, 188, 119);
+  background-color: var(--green);
 }
 
-.calculations {
-  display: flex;
-  padding-right: 20px;
-  justify-content: end;
-  font-size: 100px;
-  color: rgb(231, 231, 231);
+.calculations input[type="number"]::-webkit-inner-spin-button,
+.calculations input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
+.calculations input[type="number"] {
+  border: none;
+  outline: none;
+  background: none;
+  -webkit-text-fill-color: var(--white);
+  font-size: 90px;
+  text-align: right;
+  width: 100%;
+}
 .buttons {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -59,10 +78,14 @@ body {
   height: 90px;
   font-size: 50px;
   font-weight: 500;
-  color: rgb(231, 231, 231);
-  background: #a1a1a1;
+  color: var(--white);
+  background: var(--gray-dark);
   cursor: pointer;
-  border: 0.7px solid #4e4e4e;
+  border: 0.7px solid var(--gray-border);
+}
+
+.buttons button:active {
+  background-color: var(--gray-border);
 }
 
 .buttons button.zero {
@@ -70,10 +93,12 @@ body {
   border-bottom-left-radius: 20px;
 }
 
-.buttons button.orange-button {
-  background: rgb(255, 169, 11);
+button.orange-button {
+  background: var(--orange);
+}
+button.orange-button:last-child {
   border-bottom-right-radius: 20px;
 }
-.buttons button.dark-gray {
-  background: gray;
+button.dark-gray {
+  background: var(--gray-medium);
 }
