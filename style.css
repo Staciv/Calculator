@@ -1,0 +1,104 @@
+:root {
+  --white: rgb(231, 231, 231);
+  --gray-light: rgb(105, 105, 100);
+  --gray-dark: #a1a1a1;
+  --gray-medium: gray;
+  --gray-border: #4e4e4e;
+  --orange: rgb(255, 169, 11);
+  --red: rgb(213, 129, 129);
+  --yellow: rgb(222, 199, 135);
+  --green: rgb(154, 188, 119);
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+}
+
+.header_wrap {
+  max-width: 450px;
+  height: 190px;
+  background-color: var(--gray-light);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.button_navigation {
+  padding: 15px;
+  display: flex;
+  gap: 10px;
+}
+.button_navigation:hover {
+  opacity: 1;
+}
+.button_navigation button {
+  padding: 2px;
+  border-radius: 50%;
+}
+.button_navigation button svg {
+  opacity: 0;
+  transition: opacity 0.1s;
+}
+.button_navigation button:hover svg {
+  opacity: 1;
+}
+.close {
+  background-color: var(--red);
+}
+.collapse {
+  background-color: var(--yellow);
+}
+.expand {
+  background-color: var(--green);
+}
+
+.calculations input[type="number"]::-webkit-inner-spin-button,
+.calculations input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.calculations input[type="number"] {
+  border: none;
+  outline: none;
+  background: none;
+  -webkit-text-fill-color: var(--white);
+  font-size: 90px;
+  text-align: right;
+  width: 100%;
+}
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.buttons button {
+  height: 90px;
+  font-size: 50px;
+  font-weight: 500;
+  color: var(--white);
+  background: var(--gray-dark);
+  cursor: pointer;
+  border: 0.7px solid var(--gray-border);
+}
+
+.buttons button:active {
+  background-color: var(--gray-border);
+}
+
+.buttons button.zero {
+  grid-column: span 2;
+  border-bottom-left-radius: 20px;
+}
+
+button.orange-button {
+  background: var(--orange);
+}
+button.orange-button:last-child {
+  border-bottom-right-radius: 20px;
+}
+button.dark-gray {
+  background: var(--gray-medium);
+}
